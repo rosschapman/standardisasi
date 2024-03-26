@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="en"><!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head prefix="og: http://ogp.me/ns#"><!-- enable Open Graph: http://ogp.me/ -->
+
+  <!-- charset & http-equiv may be set via response header: https://github.com/h5bp/html5-boilerplate/blob/master/doc/html.md#x-ua-compatible -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>A11Y Boilerplate</title>
+  <meta name="description"
+    content="The Accessibility Boilerplate is a basic HTML template to kickstart your web project responsibly.">
+  <meta name="keywords"
+    content="a11y, accessibility, html5, boilerplate, template, aria, landmark roles, structure, banner, search, navigation, contentinfo">
+  <meta property="og:image" content="http://voorhoede.github.io/a11y-boilerplate/a11y-boilerplate.png">
+  <meta property="og:url" content="http://voorhoede.github.io/">
+  <!-- optionally add more Open Graph metadata: http://ogp.me/#metadata -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+  <!-- Enable styling differentation between JavaScript and non-JavaScript enabled browsers -->
+  <script>(function (e) { e.className = e.className.replace('no-js', 'js'); }(document.documentElement));</script>
+  <!-- Enable styling of HTML5 sectioning elements in legacy browsers. Simplified inline version of HTML5Shiv (https://github.com/aFarkas/html5shiv) for enhanced performance -->
+  <!--[if lt IE 9]>
+    <script>
+        (function (d, a) {
+            d.documentElement.className = 'lt-ie9'; var l = a.length; while(l--){ d.createElement(a[l]); }
+        }(document, ['HEADER', 'NAV', 'SECTION', 'FOOTER', 'ARTICLE', 'MAIN', 'FIGCAPTION', 'FIGURE', 'ASIDE']));
+    </script>
+    <![endif]-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    html {}
+
+    body {
+      font-family: 'Roboto';
+      margin: 0;
+    }
+
+    .card-dark {
+      color: white;
+    }
+
+    .cards {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 0;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    details {}
+
+    details>summary {
+      list-style: none;
+      padding: 10px 1rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    header {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      font-size: .8em;
+      padding: 10px 0;
+      gap: 10px;
+    }
+
+    .card-top {
+      box-shadow: inset 0px -3px 12px rgb(232 232 232 / 90%)
+    }
+
+    .card-list details>summary {
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+
+    .card-list .card {
+      background: white;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .site-logo img {
+      width: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner" class="site-header">
+    <a class="site-logo" href="/" rel="home" title="to homepage">
+      <img src="/assets/logo.png" />
+    </a>
+    Standardisasi by PGB California
+
+    <!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm -->
+    <!-- <nav class="site-header-quick-menu">
+      <h2 class="a11y-sr-only">Quick menu</h2>
+      <ul class="flat-list">
+        <li><a class="menu-link a11y-kb-only" href="#content">Jump to content</a></li>
+        <li><a class="menu-link a11y-kb-only" href="#main-menu">Jump to main menu</a></li>
+        <li><a class="menu-link a11y-kb-only" href="#search">Jump to search</a></li>
+        <li><a class="menu-link a11y-kb-only" href="#meta-menu">Jump to meta menu</a></li>
+        <li><a class="menu-link a11y-kb-only" href="#user">Jump to user menu</a></li>
+      </ul>
+    </nav> -->
+
+    <!-- Mark search controls for enhanced a11y: http://www.w3.org/TR/wai-aria/roles#search -->
+    <!-- <div role="search" class="search-menu">
+      <a id="search" rel="search" href="https://example.com/search">
+        <span class="icon-search"></span>
+        <span class="a11y-sr-only">Search</span>
+      </a>
+      <form method="GET" action="https://www.example.com/search" class="search-menu-form">
+        <label>
+          <span class="a11y-sr-only">Keywords</span>
+          <input type="search" name="q" placeholder="keyword(s)" />
+        </label>
+        <button>
+          <span class="icon-search"></span>
+          <span class="a11y-sr-only">Search on example.com</span>
+        </button>
+      </form>
+    </div> -->
+
+  </header>
+
+  <main id="content" role="main" tabindex="-1">
+    <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
+
+    <!-- @todo: add nav[role="navigation"] as TOC -->
+
+
+
+    <div class="cards">
+      <details class="card-top" style="background: white">
+        <summary>Putih</summary>
+        <div class="card-list">
+          <details>
+            <summary>Ketrampilan</summary>
+            <div class="cards">
+              <div class="card">
+                <img src="/assets/standard/putih/ketrampilan/mengubah_langit_dan_bumi.gif" loading="lazy"
+                  decoding="async" alt="Builder.io drag and drop interface" />
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Jalan Pendek</summary>
+          </details>
+          <details>
+            <summary>Gerak Teknik</summary>
+          </details>
+          <details>
+            <summary>Jalan Panjang</summary>
+          </details>
+          <details>
+            <summary>Ambilan</summary>
+          </details>
+        </div>
+      </details>
+      <details class="card-dark" style="background: rgb(0, 128, 0)">
+        <summary>
+          Sabuk Hijau Tua
+        </summary>
+        <div class="card-list">
+          <details>
+            <summary>Ketrampilan</summary>
+            <div class="cards">
+              <div class="card">
+                <img src="/assets/standard/putih/ketrampilan/mengubah_langit_dan_bumi.gif" loading="lazy"
+                  decoding="async" alt="Builder.io drag and drop interface" />
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Jalan Pendek</summary>
+          </details>
+          <details>
+            <summary>Gerak Teknik</summary>
+          </details>
+          <details>
+            <summary>Jalan Panjang</summary>
+          </details>
+          <details>
+            <summary>Ambilan</summary>
+          </details>
+        </div>
+      </details>
+      <details class="card" style="background: rgb(0, 255, 127)">
+        <summary>
+          Sabuk Hijau Muda
+        </summary>
+      </details>
+      <details class="card" style="background: rgb(255, 255, 0)">
+        <summary>
+          Sabuk Kuning Muda
+        </summary>
+      </details>
+      <details class="card" style="background: rgb(255, 215, 0)">
+        <summary>
+          Sabuk Kuning Tua
+        </summary>
+      </details>
+      <details class="card" style="background: rgb(255, 140, 0)">
+        <summary>
+          Sabuk Oranye
+        </summary>
+      </details>
+      <details class="card" style="background: rgb(255, 0, 0)">
+        <summary>
+          Sabuk Merah Terang
+        </summary>
+      </details>
+      <details class="card-dark" style="background: rgb(128, 0, 0)">
+        <summary>
+          Sabuk Merah Maroon
+        </summary>
+      </details>
+      <details class="card" style="background: rgb(135, 206, 250)">
+        <summary>
+          Sabuk Biru Muda
+        </summary>
+      </details>
+      <details class="card-dark" style="background: rgb(0, 0, 139)">
+        <summary>
+          Sabuk Biru Tua
+        </summary>
+      </details>
+      <details class="card" style="background: rgb(205, 133, 63)">
+        <summary>
+          Sabuk Coklat Muda
+        </summary>
+      </details>
+      <details class="card-dark" style="background: rgb(139, 69, 19)">
+        <summary>
+          Sabuk Coklat Tua
+        </summary>
+      </details>
+    </div>
+
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <!-- <p>The A11Y Boilerplate is a project by <a href="http://voorhoede.nl">De Voorhoede</a>.</p>
+    <p>The code is licensed under <a href="https://github.com/voorhoede/a11y-boilerplate/blob/master/LICENSE">MIT
+        License</a>. So use it however you like.</p> -->
+  </footer>
+
+  <!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+
+</body>
+
+</html>
