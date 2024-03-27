@@ -1,0 +1,53 @@
+html {}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+details {}
+
+details>summary {
+  list-style: none;
+  padding: 10px 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+header {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: .8em;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.card {
+  background: white;
+}
+
+.card-top {
+  box-shadow: inset 0px -3px 12px rgb(232 232 232 / 90%)
+}
+
+.card-dark {
+  color: white;
+}
+
+.card-list details>summary {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+
+img {
+  width: 100%;
+}
+
+.site-logo img {
+  width: 50px;
+}
