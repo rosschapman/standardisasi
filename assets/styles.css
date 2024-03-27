@@ -8,7 +8,6 @@ body {
 details {}
 
 details>summary {
-  list-style: none;
   padding: 10px 1rem;
   font-weight: normal;
   text-transform: uppercase;
